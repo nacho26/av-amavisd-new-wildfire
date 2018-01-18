@@ -7,9 +7,13 @@ How does it work:
   /var/amavis/tmp/amavis-20171218T132307-01008-XGcahmXN/parts to $1
 
   example listing of that folder:
+  
    ls -l /var/amavis/tmp/amavis-20171218T132307-01008-XGcahmXN/parts
+   
    -rw-r----- 1 amavis amavis     75 Dec 18 13:23 p001
+   
    -rw-r----- 1 amavis amavis 152336 Dec 18 13:23 p002
+   
    -rw-r----- 2 amavis amavis 206713 Dec 18 13:23 p004
 
  -	First compute a sha256 Hash and determine the mimetype over the files presented by amavisd-new
