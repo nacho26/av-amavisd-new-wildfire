@@ -1,11 +1,7 @@
 #!/bin/bash
 #
 # For Doc see https://github.com/nacho26/av-amavisd-new-wildfire/
-# 
 #
-#
-#
-
 # If you need Proxysupport to access the wildfire cloud like me
 #export https_proxy="http://10.0.0.1:3128"
 
