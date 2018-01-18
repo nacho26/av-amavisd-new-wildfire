@@ -1,15 +1,8 @@
 #!/bin/bash
 #
-# This script add support for the wildfire cloud to amavisd-new as a virus scanner
+# For Doc see https://github.com/nacho26/av-amavisd-new-wildfire/
+# 
 #
-# amavis passes /var/amavis/tmp/amavis-20171218T132307-01008-XGcahmXN/parts to $1
-#
-# example listing of that folder:
-#
-# ls -l /var/amavis/tmp/amavis-20171218T132307-01008-XGcahmXN/parts
-# -rw-r----- 1 amavis amavis     75 Dec 18 13:23 p001
-# -rw-r----- 1 amavis amavis 152336 Dec 18 13:23 p002
-# -rw-r----- 2 amavis amavis 206713 Dec 18 13:23 p004
 #
 #
 
