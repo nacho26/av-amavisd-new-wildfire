@@ -2,7 +2,9 @@
 
 This Project consists of to bash scripts witch cloud be used with amavisd-new. The first script wildfire.sh can be integrated to amavisd-new as virusscanner. The scripts use Palo Alto Networks Wildfire API to compute supported filetyps against ther sandbox.
 
+
 How does it work:
+
 
  amavisd-new for example passes the follogwing information to the script:
  
@@ -29,29 +31,43 @@ How does it work:
  -	Depending on the answer from the wildfire cloud –> if it’s known the verdict gets written in the redis storage and used or 
     if it’s unknown the file gets uploaded to the Cloud for inspection.
 
+
  requirements:
  
+ 
   You need a Wildfire Subscription to get use of their sandbox system.
-  
+ 
+ 
   I tested that on a debian 8 system. So you need those apps installed:
-  
+ 
+ 
+ 
   file
   
+ 
   stat
+  
   
   sha256sum
   
+  
   redis-cli
+  
   
   logger
   
+  
   panwfapi.py
+  
   
   grep
   
+  
   awk
   
+  
   and redis-server (if redis db is on the same server) - configuring the redis server is autoside of this guide
+
 
   Panwfapi.py you get at https://github.com/kevinsteves/pan-python with 
   
