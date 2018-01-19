@@ -38,12 +38,12 @@ do
 
         if [ -z "$verdict" ]
          then
-          verdict=$(/usr/local/bin/panwfapi.py -K $wfapikey -h $wfhost --verdict --hash "$hash" -x | /bin/grep '<verdict' | /usr/bin/awk -F">" '{print $2}' | /usr/bin/awk -F"<" '{print $1}')
+          verdict=$(/usr/local/bin/panwfapi.py -K $wfapikey -h $wfhost --verdict --hash "$hash" -x 2>/dev/null | /bin/grep '<verdict' | /usr/bin/awk -F">" '{print $2}' | /usr/bin/awk -F"<" '{print $1}')
           /usr/bin/logger "wf: $f $mimetype $hash $verdict"
 
           if [[ $verdict == "-102" && $mimetype != "application/pdf" ]]
            then
-            /usr/local/bin/panwfapi.py -K $wfapikey -h $wfhost --submit $f > /dev/null
+            /usr/local/bin/panwfapi.py -K $wfapikey -h $wfhost --submit $f 2>/dev/null
             /usr/bin/logger "wf: $f $mimetype $filesize uploaded"
             continue
 
