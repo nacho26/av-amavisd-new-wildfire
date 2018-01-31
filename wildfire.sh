@@ -58,7 +58,8 @@ do
 
         if [ "$verdict" -ge 1 ]
          then
-          /usr/bin/logger "wf: $f $mimetype $hash $verdict blockiert"
+          /usr/bin/logger "wf: $f $mimetype $hash $verdict blocked"
+          echo "$f $mimetype $hash $verdict blocked"
           exit 60
          fi
    fi
