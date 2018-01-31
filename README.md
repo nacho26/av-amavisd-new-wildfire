@@ -88,3 +88,6 @@ How does it work:
   because the sample is new to wildfire. Then amavisd-new should tempfail (smtp 450) the mail.
 
 The second script can be run on a daily basis to get use of changed verdicts. for example a benign that was later classivied as malware and so on.
+
+
+The secound script wfverdictchange.sh can be run on a daily basis. It's updates changed verdicts to your redis storage. For example Malware that was formerly classified as benign or vice versa.
